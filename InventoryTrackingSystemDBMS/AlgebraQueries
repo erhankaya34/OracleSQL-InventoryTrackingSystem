@@ -1,0 +1,76 @@
+Join Query 1:
+
+
+π("CustomerID", "MovieID", "Title", "PurchaseDate")(
+    σ("FirstName"='Emily' AND "LastName"='Anderson")(
+        "Customer" ⨝ ("Purchase" ⨝ "Movie")
+    )
+)
+
+
+Join Query 2:
+
+
+π("CustomerID", "SongID", "Title", "PurchaseDate")(
+    σ("FirstName"='Benjamin' AND "LastName"='Johnson")(
+        "Customer" ⨝ ("Purchase" ⨝ "Song")
+    )
+)
+--------------------
+
+Nested Query 1:
+
+π("FirstName", "LastName")(
+    σ("CustomerID" ∈ π("CustomerID")("Purchase"))("Customer")
+)
+
+
+Nested Query 2:
+
+π("Title", "Artist")(
+    σ("Genre" ∈ π("Genre")(σ("ReleaseYear" >= 2010)("Song")))("Song")
+)
+--------------------
+
+Set Operation 1: UNION
+
+π("Title", "Artist")(
+    σ("Genre" = 'Rock')("Song")
+    ∪
+    π("Title", "Artist")(
+        σ("Genre" = 'Pop')("Song")
+    )
+)
+
+
+
+Set Operation 2: Intersect
+
+π("Title", "Artist")(
+    σ("Genre" = 'Pop')("Song")
+    ∩
+    π("Title", "Artist")(
+        σ("ReleaseYear" >= 2010)("Song")
+    )
+)
+
+
+
+--------------------
+
+Aggregate Operation 1: COUNT with JOIN
+
+π("FirstName", "LastName", COUNT("PurchaseID") AS PurchaseCount)(
+    "Customer" ⨝ "Purchase"
+    γ("FirstName", "LastName", COUNT("PurchaseID"))("Customer" ⨝ "Purchase")
+)
+
+
+
+Aggregate Operation 2: MAX with JOIN
+
+π("FirstName", "LastName", MAX("PurchaseDate") AS LatestPurchaseDate)(
+    "Customer" ⨝ "Purchase"
+    γ("FirstName", "LastName", MAX("PurchaseDate"))("Customer" ⨝ "Purchase")
+)
+    

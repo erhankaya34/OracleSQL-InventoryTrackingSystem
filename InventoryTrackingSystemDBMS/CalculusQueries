@@ -1,0 +1,38 @@
+1)
+Find customers who have purchased a song with a release year after 2010:
+
+
+{ c | Customer(c) ∧ ∃ p ( Purchase(p) ∧ Song(s) ∧ p.CustomerID = c.CustomerID ∧ p.SongID = s.SongID ∧ s.ReleaseYear > 2010 ) }
+
+((This query retrieves all the customers (c) from the Customer relation who have made a purchase (p) of a song (s) where the release year of the song is after 2010.))
+
+
+2)
+
+Find the titles of movies directed by 'Christopher Nolan':
+
+
+{ m.Title | Movie(m) ∧ m.Director = 'Christopher Nolan' }
+
+((This query returns the titles of movies (m) from the Movie relation where the director is 'Christopher Nolan'.))
+
+
+3)
+
+Find customers who have purchased more than 5 songs:
+
+
+{ c | Customer(c) ∧ (cardinality(π p (Purchase(p) ∧ p.CustomerID = c.CustomerID)) > 5) }
+
+((This query retrieves all the customers (c) from the Customer relation who have purchased more than 5 songs. It uses the cardinality function to count the number of purchases (p) made by each customer and checks if it is greater than 5.))
+
+
+4)
+
+Find the average rating of movies in the 'Action' genre:
+
+
+{ avg(m.Rating) | Movie(m) ∧ m.Genre = 'Action' }
+
+((This query calculates the average rating of movies (m) from the Movie relation where the genre is 'Action' using the avg function.))
+

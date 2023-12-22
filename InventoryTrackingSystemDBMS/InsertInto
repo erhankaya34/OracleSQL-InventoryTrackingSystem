@@ -1,0 +1,159 @@
+# Insert Into
+
+-- customers
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('103245', 'Emily', 'Anderson', '05554321098');
+
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('194567', 'Benjamin', 'Johnson', '05338765432');
+
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('156789', 'Olivia', 'Davis', '05444567890');
+
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('189034', 'Ethan', 'Thompson', '05528907654');
+
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('120345', 'Ava', 'Mitchell', '05446783210');
+
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('168902', 'Liam', 'Turner', '05446783210');
+
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('115677', 'Harper', 'Foster', '05416789012');
+
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('176543', 'Noah', 'Anderson', '05554321098');
+
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('142398', 'Amilia', 'Roberts', '05432109876');
+
+INSERT INTO "Customer" ("CustomerID", "FirstName", "LastName", "Phone")
+VALUES ('109876', 'William', 'Harrison', '05318765432');
+
+
+—- songs
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('200123', 'Midnight Echo', 'The Velvet Orchids', 'Moonlight Serenade', 'Rock', '2019');
+
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('298765', 'Midnight Serenade', 'Moonlight Sonata', 'Nocturnal Melodies', 'Classical', '1998');
+
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('200876', 'Rhythm of the Night', 'Electric Groove', 'Dancefloor Anthems', 'Pop', '2020');
+
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('299012', 'Neon Nights', 'Electric Pulse', 'Retro Vibes', 'Synthwave', '1997');
+
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('208412', 'Soulful Reflections', 'Velvet Harmony', 'Essence of Love', 'RnB', '2011');
+
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('267890', 'Hotel California', 'Eagles', 'Hotel California', 'Rock', '1977');
+
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('245678', 'Uptown Funk', 'Mark Ronson ft. Bruno Mars', 'Uptown Special', 'Pop', '2014');
+
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('202345', 'Viva la Vida', 'Coldplay', 'Viva la Vida or Death and All His FriendsSpecial', 'Alternative Rock', '2008');
+
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('201234', 'Sweet Child o Mine', 'Guns N Roses', 'Appetite for Destruction', 'Rock', '1987');
+
+INSERT INTO "Song" ("SongID", "Title", "Artist", "Album", "Genre", "ReleaseYear")
+VALUES ('201890', 'Get Lucky', 'Daft Punk ft. Pharrell Williams', 'Random Access Memories', 'Disco', '2013');
+
+
+—- movies
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('300123', 'Inception', 'Christopher Nolan', 'SciFi', DATE '2010-07-16', '8.8');
+
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('382345', 'Pulp Fiction', 'Quentin Tarantino', 'Crime', DATE '1994-10-14', '8.9');
+
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('303456', 'Fight Club', 'David Fincher', 'Drama', DATE '1999-10-15', '8.8');
+
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('361234', 'The Matrix', 'Lana Wachowski', 'Action', DATE '1999-03-31', '8.7');
+
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('308901', 'Interstellar', 'Christopher Nolan', 'SciFi', DATE '2012-03-15', '8.6');
+
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('307890', 'The Lord Of The Rings : Return Of The King', 'Peter Jackson', 'Action', DATE '2014-11-05', '8.6');
+
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('309012', 'Seven', 'David Fincher', 'Crime', DATE '1995-09-22', '8.6');
+
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('336789', 'Prestige', 'Cristopher Nolan', 'Drama', DATE '2006-10-20', '8.5');
+
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('310473', 'The Pianist', 'Roman Polanski ', 'Biography', DATE '2002-09-24', '8.8');
+
+INSERT INTO "Movie" ("MovieID", "Title", "Director", "Genre", "ReleaseYear", "Rating")
+VALUES ('305678', 'The Lion King ', 'Roger Allers', 'Animation', DATE '1994-06-15', '8.5');
+
+
+
+-- purchase
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('928521', '189034', '307890', '298765', DATE '2022-08-15', 1, 'Digital');
+
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('958624', '115677', '303456', '200123', DATE '2022-08-14', 2, 'Physical');
+
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('965412', '189034', '361234', '200876', DATE '2022-08-10', 1, 'Digital');
+
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('964789', '194567', '310473', '201890', DATE '2022-08-05', 3, 'Physical');
+
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('985321', '109876', '336789', '201234', DATE '2022-07-30', 5, 'Physical');
+
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('902345', '120345', '307890', '202345', DATE '2022-07-22', 2, 'Digital');
+
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('986254', '168902', '307890', '245678', DATE '2022-07-22', 2, 'Digital');
+
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('985147', '103245', '361234', '245678', DATE '2022-06-15', 1, 'Digital');
+
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('967145', '115677', '303456', '298765', DATE '2022-06-12', 8, 'Digital');
+
+INSERT INTO "Purchase" ("PurchaseID", "CustomerID", "MovieID", "SongID", "PurchaseDate", "Quantity", "Field")
+VALUES ('924355', '156789', '307890', '201890', DATE '2022-06-10', 3, 'Physical');
+
+-- store
+INSERT INTO "Store" ("StoreID", "Name", "Location", "Phone", "Website")
+VALUES ('643523', 'Best Movies', 'New York', '05328522463', '[www.bestmovies.com](http://www.bestmovies.com/)');
+
+INSERT INTO "Store" ("StoreID", "Name", "Location", "Phone", "Website")
+VALUES ('689564', 'Music Galore', 'Los Angeles', '05354879635', '[www.musicgalore.com](http://www.musicgalore.com/)');
+
+INSERT INTO "Store" ("StoreID", "Name", "Location", "Phone", "Website")
+VALUES ('698210', 'CineMusic', 'London', '05489875264', '[www.cinemusic.co.uk](http://www.cinemusic.co.uk/)');
+
+-- inventory
+INSERT INTO "Inventory" ("StoreID", "InventoryID", "MovieID", "SongID", "StockQuantity")
+VALUES (643523, 721058, 300123, 200876, 50);
+
+INSERT INTO "Inventory" ("StoreID", "InventoryID", "MovieID", "SongID", "StockQuantity")
+VALUES (689564, 789546, 307890, 298765, 100);
+
+INSERT INTO "Inventory" ("StoreID", "InventoryID", "MovieID", "SongID", "StockQuantity")
+VALUES (698210, 768524, 307890, 298765, 100);
+
+-— supplier
+INSERT INTO "Supplier" ("SupplierID", "Name", "Address")
+VALUES ('821058', 'ABC Media Supplies', '123 Main Street');
+
+INSERT INTO "Supplier" ("SupplierID", "Name", "Address")
+VALUES ('854698', 'Music World Distributors', '456 Oak Avenue');
+
+INSERT INTO "Supplier" ("SupplierID", "Name", "Address")
+VALUES ('835214', 'Movie Magic Suppliers', '394 York Street');
